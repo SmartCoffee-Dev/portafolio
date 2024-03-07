@@ -1,36 +1,32 @@
-<section class="h-screen flex flex-col justify-center items-center">
-	<div class="relative h-[60vh] w-fit rounded-b-3xl overflow-hidden">
+<section id="greeting" class="h-screen flex flex-col justify-center md:justify-end items-center pt-9 pb-5">
+	<div class="relative h-[30vh] md:h-[50vh] w-fit rounded-b-3xl overflow-hidden">
 		<span
-			class="w-full h-[85%] absolute bottom-0 bg-slate-600 bg-opacity-50 backdrop-blur-md rounded-t-full"
+			class="w-full h-[85%] absolute bottom-0 bg-slate-600 bg-opacity-50 backdrop-blur-md rounded-t-full rounded-b-full"
 		></span>
 		<img
-			class="relative"
+			class="relative h-full"
 			src="./agt_1.png"
 			alt="Joven con bucket hat beige sonriendo de perfil"
 		/>
 	</div>
 
-	<h1 class="text-9xl font-extrabold text-center text-white opacity-50">Adán González</h1>
-	<h2 class="text-6xl font-extrabold text-center">Fullstack👨🏽‍💻Developer</h2>
+	<h1 class="text-3xl md:text-7xl font-extrabold text-center text-white opacity-50">
+		Adán González
+	</h1>
+	<h2 class="text-xl md:text-5xl font-medium text-center text-transparent p-1 md:p-5">
+		Fullstack👨🏽‍💻Developer
+	</h2>
+
+	<div class="my-2">
+		<span>Media 1</span>
+		<span>Media 1</span>
+		<span>Media 1</span>
+		<span>Media 1</span>
+	</div>
 </section>
 
 <style>
-
-	@supports (-webkit-text-stroke: 3px rgb(var(--foreground-rgb))) {
-		h2 {
-			-webkit-text-fill-color: transparent;
-			-webkit-text-stroke: 1.5px rgb(var(--foreground-rgb));
-		}
-	}
-
-	@supports not (-webkit-text-stroke: 3px rgb(var(--foreground-rgb))) {
-		h2 {
-			color: rgba(var(--foreground-rgb), 0.5);
-			text-shadow:
-				1px 1px 0 rgb(var(--foreground-rgb)),
-				-1px 1px 0 rgb(var(--foreground-rgb)),
-				-1px -1px 0 rgb(var(--foreground-rgb)),
-				1px -1px 0 rgb(var(--foreground-rgb));
-		}
+	h2 {
+		text-shadow: 0px 0px 1px rgba(var(--foreground-rgb), 0.5);
 	}
 </style>
