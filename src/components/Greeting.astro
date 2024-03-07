@@ -1,0 +1,52 @@
+<section>
+	
+	<h1>Adán González</h1>
+	<h2>Fullstack👨🏽‍💻Developer</h2>
+
+</section>
+
+<style>
+	section {
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+
+	h1,
+	h2 {
+		text-align: center;
+	}
+	
+	h1 {
+		font-size: 96px;
+		font-weight: 900;
+		color: transparent;
+		background-color: rgba(var(--foreground-rgb), 0.7);
+		background-clip: text;
+	}
+	
+	h2 {
+		font-size: 64px;
+		font-weight: 800;
+	}
+
+	@supports (-webkit-text-stroke: 3px rgb(var(--foreground-rgb))) {
+		h2 {
+			-webkit-text-fill-color: transparent;
+			-webkit-text-stroke: 1.5px rgb(var(--foreground-rgb));
+		}
+	}
+
+	@supports not (-webkit-text-stroke: 3px rgb(var(--foreground-rgb))) {
+		h2 {
+			color: rgba(var(--foreground-rgb), 0.5);
+			text-shadow:
+				1px 1px 0 rgb(var(--foreground-rgb)),
+				-1px 1px 0 rgb(var(--foreground-rgb)),
+				-1px -1px 0 rgb(var(--foreground-rgb)),
+				1px -1px 0 rgb(var(--foreground-rgb));
+		}
+	}
+	
+</style>
