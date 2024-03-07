@@ -1,4 +1,6 @@
 ---
+import Background from '../components/Background.astro'
+
 interface Props {
 	title: string;
 }
@@ -7,21 +9,24 @@ const { title } = Astro.props;
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="" />
+		<meta name="description" content="Conoce mi experiencia como desarrollador de software 👨🏽‍🚀 y descubre maneras de potenciar tu negocio o idea 🚀" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<Background>
+			<slot />
+		</Background>
 	</body>
 </html>
 <style is:global>
 	:root {
+		// ASTRO
 		--accent: 136, 58, 234;
 		--accent-light: 224, 204, 250;
 		--accent-dark: 49, 10, 101;
@@ -31,11 +36,29 @@ const { title } = Astro.props;
 			rgb(var(--accent-light)) 30%,
 			white 60%
 		);
+
+		// CUSTOM
+		--color-bg1: rgb(108, 0, 162);
+  	--color-bg2: rgb(0, 17, 82);
+		--background-rgb: 0, 0, 0;
+		--foreground-rgb: 255,255,255;
+		--color1: 92, 107, 192;
+		--color2: 149, 117, 205;
+		--color3: 61, 57, 113;
+		--color4: 106, 27, 154;
+		--color5: 106, 27, 154;
+		--color-interactive: 140, 100, 255;
+		--circle-size: 100%;
+		--blending: hard-light;
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+		background: #27044a;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
 	}
 	code {
 		font-family:
@@ -48,4 +71,39 @@ const { title } = Astro.props;
 			Courier New,
 			monospace;
 	}
+	@keyframes moveInCircle {
+		0% {
+			transform: rotate(0deg);
+		}
+		50% {
+			transform: rotate(180deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	@keyframes moveVertical {
+		0% {
+			transform: translateY(-50%);
+		}
+		50% {
+			transform: translateY(50%);
+		}
+		100% {
+			transform: translateY(-50%);
+		}
+	}
+
+	@keyframes moveHorizontal {
+		0% {
+			transform: translateX(-50%) translateY(-10%);
+		}
+		50% {
+			transform: translateX(50%) translateY(10%);
+		}
+		100% {
+			transform: translateX(-50%) translateY(-10%);
+		}
+	}	
 </style>
