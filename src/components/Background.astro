@@ -23,7 +23,7 @@
 		<span class="g7"></span>
 		<span class="interactive"></span>
 	</div>
-	<div class="container">
+	<div class="custom-container">
 		<slot />
 	</div>
 </div>
@@ -55,16 +55,21 @@
 </script>
 
 <style>
-	.container {
+	.custom-container {
 		width: 100vw;
 		height: 100vh;
 		position: absolute;
 		top: 0;
 		left: 0;
-		padding-inline: calc(50vw - 400px);
+		padding-inline: calc(50vw - 175px);
 		box-sizing: border-box;
 		overflow-y: scroll;
-		/* background: rgba(var(--background-rgb), 0.2); */
+		background: rgba(var(--foreground-rgb), 0.27);
+		backdrop-filter: blur(10px);
+		
+		@media (min-width: 520px) {
+			padding-inline: calc(50vw - 300px);
+		}
 	}
 
 	.gradient-bg {
