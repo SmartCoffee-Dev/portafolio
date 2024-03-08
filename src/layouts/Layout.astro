@@ -1,6 +1,9 @@
 ---
 import Background from '../components/Background.astro'
 
+// Supports weights 100-900
+import '@fontsource-variable/museomoderno';
+
 interface Props {
 	title: string;
 }
@@ -42,9 +45,9 @@ const { title } = Astro.props;
   	--color-bg2: rgb(0, 17, 82);
 		--background-rgb: 0, 0, 0;
 		--foreground-rgb: 255,255,255;
-		--color1: 92, 107, 192;
+		--color1: 192, 92, 167;
 		--color2: 149, 117, 205;
-		--color3: 61, 57, 113;
+		--color3: 113, 57, 109;
 		--color4: 106, 27, 154;
 		--color5: 106, 27, 154;
 		--color-interactive: 140, 100, 255;
@@ -52,7 +55,7 @@ const { title } = Astro.props;
 		--blending: hard-light;
 	}
 	html {
-		font-family: system-ui, sans-serif;
+		font-family: 'MuseoModerno Variable', system-ui, sans-serif;
 		background: #27044a;
 	}
 
