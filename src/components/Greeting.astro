@@ -1,3 +1,6 @@
+---
+import Social from '../components/Social.astro'
+---
 <section
 	id="greeting"
 	class="h-screen flex flex-col justify-center items-center pt-9 pb-5"
@@ -43,11 +46,10 @@
 		<span class="font-semibold">alcance social.</span>
 	</p>
 
-	<div class="my-2">
-		<span>Media 1</span>
-		<span>Media 1</span>
-		<span>Media 1</span>
-		<span>Media 1</span>
+	<div class="flex flex-wrap justify-center gap-2 my-2">
+		<Social link="mailto:smartcoffee.dev@gmail.com" name="smartcoffee.dev@gmail.com" iconSource="./icons/mail.svg"/>
+		<Social link="http://www.linkedin.com/in/adán-gonzález-torres-b650a3148" name="Adán González Torres" iconSource="./logos/linkedin-icon-3.svg"/>
+		<Social link="https://github.com/SmartCoffee-Dev" name="SmartCoffee-Dev" iconSource="./logos/github-icon-1.svg"/>
 	</div>
 </section>
 

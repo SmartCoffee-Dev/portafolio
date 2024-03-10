@@ -1,0 +1,10 @@
+---
+const { name, link, iconSource } = Astro.props;
+---
+
+<a class="flex h-6 gap-1 text-sm items-center bg-violet-900 text-white rounded-full overflow-hidden" href={link} target="_blank">
+	<img class="h-full w-auto" src={iconSource} alt={`${name} Logo`} />
+	<span class="my-1 mx-2">
+		{name}
+	</span>
+</a>
