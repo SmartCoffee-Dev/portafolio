@@ -8,7 +8,7 @@ import Social from '../components/Social.astro'
 	<article
 		class="w-full flex flex-wrap flex-col-reverse md:flex-nowrap md:flex-row items-center md:items-end justify-center"
 	>
-		<div class="flex flex-col md:mr-6 text-center md:text-left font-headers">
+		<div id="name" class="flex flex-col md:mr-6 text-center md:text-left font-headers transition-all ease-in-out duration-1000 cursor-pointer">
 			<h1
 				class="flex flex-row md:flex-col text-3xl md:text-7xl font-extrabold text-violet-950"
 			>
@@ -17,7 +17,7 @@ import Social from '../components/Social.astro'
 			</h1>
 
 			<h2 class="text-xl md:text-2xl font-medium text-transparent md:pt-5">
-				Fullstack 👨🏽‍💻 Developer
+				Fullstack <span class="emoji">👨🏽‍💻</span> Developer
 			</h2>
 		</div>
 
@@ -57,4 +57,11 @@ import Social from '../components/Social.astro'
 	h2 {
 		text-shadow: 0px 0px 0px rgba(76, 29, 149, 0.85);
 	}
+
+	#name:hover {
+		.emoji {
+			color: black;
+		}
+	}
+
 </style>
