@@ -1,0 +1,114 @@
+---
+import SectionHeader from "../components/SectionHeader.astro"
+---
+
+<section class="flex flex-col text-violet-950 font-content min-h-fit">
+
+	<SectionHeader title="Demos"/>
+
+	<div id="demos-grid">
+
+		<article id="landscape-demo">
+			<video controls controlslist="nodownload"
+			poster="./logos/sohersa-cover-green.png">
+			<source >
+				<source src="https://firebasestorage.googleapis.com/v0/b/goto-smartcoffee-dev.appspot.com/o/demos%2FBimTakeoff%20-%20congreso%20-%20original.mp4?alt=media&token=8a8913bb-282f-47f8-94fb-d2e48778ee19" type="video/mp4">
+			</video>
+		</article>
+		<article id="portrait-demo">
+			<video controls controlslist="nodownload"
+			poster="./logos/econstruction-cover-violet.png">
+			<source >
+				<source src="https://firebasestorage.googleapis.com/v0/b/goto-smartcoffee-dev.appspot.com/o/demos%2FDemo%20eConstruction%209a16%20720%20comprimido.mp4?alt=media&token=cf776ea1-90ea-41af-8b49-2b970d09bb00" type="video/mp4">
+			</video>
+		</article>
+		<article id="square-demo">
+			<video controls controlslist="nodownload"
+			poster="./logos/smartcoffee-cover-pink.png">
+				<source src="https://firebasestorage.googleapis.com/v0/b/goto-smartcoffee-dev.appspot.com/o/demos%2FEjemplo%20de%20uso%20de%20webapp%20para%20consolidaci%C3%B3n%20de%20suelos.mp4?alt=media&token=7f73eaff-27aa-46f5-8bd7-d1597c06bfce">
+			</video>
+		</article>
+		<article id="call-to-action" class="text-sm md:text-sm text-pretty text-center">
+			Si te gustó lo que viste
+			<span class="font-semibold">¡Contáctame!</span>
+		</article>
+
+	</div>
+
+</section>
+
+<style>
+
+	#demos-grid {
+		display: grid;
+		grid-template-columns: repeat(1fr, 4);
+		grid-auto-rows: 116px;
+		grid-template-areas: 
+			"landscape-demo landscape-demo landscape-demo landscape-demo"
+			"portrait-demo portrait-demo square-demo square-demo"
+			"portrait-demo portrait-demo call-to-action call-to-action"
+		;
+		gap: 10px;
+
+		align-content: center;
+
+		justify-items: center;
+		align-items: center;
+
+		article {
+			border-radius: 20px;
+			border-width: 2px;
+			overflow: hidden;
+
+			height: 100%;
+			width: 100%;
+
+			justify-content: center;
+			align-content: center;
+		}
+
+		article video {
+			border-radius: 15px;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@media (width > 768px) {
+
+		#demos-grid {
+			grid-template-columns: repeat(1fr, 5);
+			grid-auto-rows: 212px;
+			grid-template-areas: 
+				"portrait-demo portrait-demo landscape-demo landscape-demo landscape-demo"
+				"portrait-demo portrait-demo square-demo square-demo call-to-action"
+			;
+		}
+
+	}
+
+	#landscape-demo {
+		grid-area: landscape-demo;
+		border-color: #D9F2D0;
+		background-color: #D9F2D0;
+	}
+
+	#portrait-demo {
+		grid-area: portrait-demo;
+		border-color: #AEABF8;
+		background-color: #AEABF8;
+	}
+
+	#square-demo {
+		grid-area: square-demo;
+		border-color: #F2CFEE;
+		background-color: #F2CFEE;
+	}
+
+	#call-to-action {
+		grid-area: call-to-action;
+		border-color: #DCEAF7;
+		background-color: #DCEAF7;
+	}
+
+</style>
